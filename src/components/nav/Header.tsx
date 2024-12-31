@@ -23,39 +23,39 @@ export const Header = () => {
   );
 };
 
-// export const MyLinks = () => (
-//   <div className="flex items-center text-lg gap-4">
-//     <Link
-//       className="text-zinc-300 hover:text-[#2591c2] transition-colors"
-//       href="https://www.linkedin.com"
-//       target="_blank"
-//       rel="nofollow"
-//     >
-//       <SiLinkedin />
-//     </Link>
-//     <Link
-//       className="text-zinc-300 hover:text-[#2591c2] transition-colors"
-//       href="https://www.instagram.com"
-//       target="_blank"
-//       rel="nofollow"
-//     >
-//       <SiInstagram />
-//     </Link>
-//     <Link
-//       className="text-zinc-300 hover:text-[#2591c2] transition-colors"
-//       href="https://www.facebook.com"
-//       target="_blank"
-//       rel="nofollow"
-//     >
-//       <SiFacebook />
-//     </Link>
-//     <Link
-//       className="text-zinc-300 hover:text-[#2591c2] transition-colors"
-//       href="https://www.youtube.com"
-//       target="_blank"
-//       rel="nofollow"
-//     >
-//       <SiYoutube />
-//     </Link>
-//   </div>
-// );
+export const MyLinks = () => (
+  <div className="flex items-center text-lg gap-4">
+    <Link
+      className="text-zinc-300 hover:text-[#2591c2] transition-colors"
+      href="https://www.linkedin.com"
+      target="_blank"
+      rel="nofollow"
+    >
+      <SiLinkedin />
+    </Link>
+    <Link
+      className="text-zinc-300 hover:text-[#2591c2] transition-colors"
+      href="https://www.instagram.com"
+      target="_blank"
+      rel="nofollow"
+    >
+      <SiInstagram />
+    </Link>
+    <Link
+      className="text-zinc-300 hover:text-[#2591c2] transition-colors"
+      href="https://www.facebook.com"
+      target="_blank"
+      rel="nofollow"
+    >
+      <SiFacebook />
+    </Link>
+    <Link
+      className="text-zinc-300 hover:text-[#2591c2] transition-colors"
+      href="https://www.youtube.com"
+      target="_blank"
+      rel="nofollow"
+    >
+      <SiYoutube />
+    </Link>
+  </div>
+);
