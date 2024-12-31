@@ -1,17 +1,16 @@
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { SectionHeader } from "../util/SectionHeader";
 import Reveal from "../util/Reveal";
-import { MyLinks } from "../nav/Header";
 import { Company } from "./Company";
 
 export const About = () => {
   return (
-    <section id="about" className="section-wrapper">
+    <section id="about" className="section-wrapper text-black">
       <SectionHeader title="À&nbsp;Propos" dir="l" />
       <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8">
         <div className="space-y-4">
           <Reveal>
-            <p className="leading-relaxed text-zinc-300">
+            <p className="leading-relaxed text-black">
               <span className="bg-[#2591c2] text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
                 AMTI
               </span>
@@ -22,7 +21,7 @@ export const About = () => {
             </p>
           </Reveal>
           <Reveal>
-            <p className="leading-relaxed text-zinc-300">
+            <p className="leading-relaxed text-black">
               En combinant innovation technologique et savoir-faire local, nous
               proposons une gamme complète d&apos;équipements, incluant des chariots
               médicaux ergonomiques et des tables opératoires en inox. Notre mission :
@@ -30,7 +29,7 @@ export const About = () => {
             </p>
           </Reveal>
           <Reveal>
-            <p className="leading-relaxed text-zinc-300">
+            <p className="leading-relaxed text-black">
               Avec une équipe passionnée et des infrastructures modernes, AMTI
               continue d&apos;innover pour répondre aux besoins des professionnels de
               santé. Découvrez notre impact en cliquant sur le lien ci-dessous.

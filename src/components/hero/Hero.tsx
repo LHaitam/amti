@@ -21,14 +21,22 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 mx-auto  px-4 md:px-8">
         <Reveal>
-          <h1 className="pointer-events-auto text-6xl sm:text-6xl font-black text-zinc-100 md:text-8xl">
-            <span className="text-[#2591c2]"> Amti</span>
+          <h1 className="pointer-events-auto font-bold text-6xl sm:text-6xl font-black text-zinc-100 md:text-7xl">
+            <span className="text-[#2a3b8d] " style={{
+              textShadow: "0 0 .5px white, 0 0 .5px white",
+            }}> ALFA MAROC TECH </span><span className="text-[#1b7cc1] " style={{
+              textShadow: "0 0 .5px white, 0 0 .5px white",
+            }}>INDUSTRIE</span>
           </h1>
         </Reveal>
         <Reveal>
-          <h2 className="pointer-events-auto  text-3xl sm:text-2xl text-zinc-300 md:my-6 md:text-4xl">
+          <h2 className="pointer-events-auto  text-3xl sm:text-2xl text-zinc-300 md:my-6 md:text-4xl" style={{
+            textShadow: "0 0 .5px white, 0 0 .5px white",
+          }}>
             L&apos;innovation médicale,{" "}
-            <span className="font-semibold text-[#2591c2]">
+            <span className="font-semibold text-[#2591c2] " style={{
+              textShadow: "0 0 .5px white, 0 0 .5px white",
+            }}>
               Made in Morocco
             </span>
           </h2>

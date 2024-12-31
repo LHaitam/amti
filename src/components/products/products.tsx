@@ -30,11 +30,11 @@ export const Products = () => {
   ];
 
   return (
-    <section id="products" className="py-16 bg-zinc-900 text-zinc-100">
+    <section id="products" className="py-16 text-black">
       <SectionHeader title="Nos&nbsp;Produits" dir="l" />
       <div className="container mx-auto px-4">
         <Reveal>
-          <p className="text-center text-justify text-zinc-300 mb-12 leading-relaxed">
+          <p className="text-center text-justify text-zinc-600 mb-12 leading-relaxed">
             Chez <span className="font-bold text-[#2591c2]">AMTI</span>, nous proposons
             une gamme variée de produits médicaux, allant des chariots et lits médicaux
             aux tables opératoires et accessoires spécialisés. En tant qu'entreprise
@@ -43,11 +43,11 @@ export const Products = () => {
           </p>
         </Reveal>
         <Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
             {gridItems.map((item, index) => (
               <motion.div
                 key={index}
-                className="relative group overflow-hidden rounded-lg"
+                className="relative group overflow-hidden rounded-lg shadow-lg"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
