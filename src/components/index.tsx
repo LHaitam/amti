@@ -17,7 +17,7 @@ export const HomPage = () => {
       <main>
         <div className="space-y-32 pb-24">
           {/* Hero section with full width */}
-          <div className="w-full min-h-screen z-10 bg-black bg-opacity-50">
+          <div className="w-full min-h-screen z-10 bg-black bg-opacity-10">
             <Hero />
           </div>
           {/* Rest of the content */}
@@ -25,9 +25,8 @@ export const HomPage = () => {
             <About />
             <Strength />
             <Products />
-            <BasicFAQ />
-            {/* <Projects />
-            <Experience />
+            <Projects />
+            {/*<Experience />
             <Contact /> */}
           </div>
         </div>

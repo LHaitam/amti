@@ -1,152 +1,102 @@
 import React from "react";
 import { SectionHeader } from "../util/SectionHeader";
 import { Project } from "./Project";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import Reveal from "../util/Reveal";
 
 export const Projects = () => {
   return (
-    <section className="section-wrapper" id="projects">
-      <SectionHeader title="Projects" dir="r" />
-
-      <div className="grid gap-12 grid-cols-1 md:grid-cols-2">
+    <section className="section-wrapper text-black" id="projects">
+      <SectionHeader title="Nos&nbsp;Grand&nbsp;Projets" dir="l" />
+      <Reveal>
+        <p className="text-center text-justify text-zinc-600 mb-12 leading-relaxed">
+        <span className="bg-[#2591c2] text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
+                AMTI
+              </span> est fier de contribuer à des projets médicaux d'envergure à travers le Maroc.
+          Grâce à notre expertise et nos solutions innovantes, nous avons collaboré avec des institutions prestigieuses pour améliorer les infrastructures
+          et les services de santé dans différentes régions. Découvrez nos projets les plus marquants.
+        </p>
+      </Reveal>
+      <div className="grid gap-12 grid-cols-1 mb-12 md:grid-cols-2">
         {projects.map((project) => {
           return <Project key={project.title} {...project} />;
         })}
       </div>
+      <Reveal>
+        <div className="flex justify-center items-center">
+          <a
+            href="/#"
+            className="text-sm text-[#2591c2] flex items-center gap-2 font-semibold hover:text-[#1066af] transition"
+          >
+            En savoir plus <AiOutlineArrowRight />
+          </a>
+        </div>
+      </Reveal>
+
     </section>
   );
 };
 
 const projects = [
   {
-    title: "Paint.app",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["Flutter", "MUI", "Python", "FastAPI"],
+    title: "Centre Régional d'Oncologie - Beni Mellal",
+    imgSrc: "projet.jpg",
     description:
-      "A real-time coaching app for students learning to paint. This app is my baby, designed and built on my own.",
-    modalContent: (
-      <>
-        <p>
-          Pain.app is a real-time coaching app for students learning to paint.
-          This app is my baby, designed and built on my own.
-        </p>
-        <p>
-          The tech stack is based on top of Flutter for the mobile app,
-          connected to a Python & FastAPI backend, with data stored in Postgres,
-          deployed on Heroku.
-        </p>
-        <p>
-          Because this isn&apos;t real, here&apos;s some gibberish to fill space{" "}
-          {":)"}
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
-        </p>
-        <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
-        </p>
-      </>
-    ),
+      "Un projet clé visant à améliorer l'accès aux soins pour les patients atteints de cancer grâce à des équipements médicaux innovants.",
+      modalContent: (
+        <>
+          <p>
+            Le Centre Régional d'Oncologie de Beni Mellal a été conçu pour
+            répondre aux besoins des patients atteints de cancer. AMTI a fourni
+            des équipements médicaux modernes pour assurer des traitements de
+            qualité.
+          </p>
+        </>
+      ),
   },
   {
-    title: "The Canvas Club",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["Node", "Express", "Postgres", "Kafka", "Redis"],
+    title: "Hôpital Universitaire International Cheikh Khalifa",
+    imgSrc: "projet1.jpg",
     description:
-      "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-    modalContent: (
-      <>
-        <p>
-          The Canvas Club is a social community for painters to connect with
-          others in their community.
-        </p>
-        <p>
-          I work primarily on the backend, a collection of Node & Express
-          microservices. Data is stored primarily in Postgres & cached in Redis.
-        </p>
-        <p>
-          The team in total consists of 5 developers. This is a passion project
-          for all of us.
-        </p>
-        <p>
-          Because this isn&apos;t real, here&apos;s some gibberish to fill space{" "}
-          {":)"}
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
-        </p>
-        <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
-        </p>
-      </>
-    ),
+      "Aménagement des départements avec des dispositifs médicaux répondant aux standards internationaux à Casablanca.",
+      modalContent: (
+        <>
+          <p>
+            Situé à Casablanca, cet hôpital est une référence en matière de soins
+            médicaux. AMTI a collaboré pour fournir des dispositifs médicaux
+            modernes et adaptés aux besoins des patients.
+          </p>
+        </>
+      ),
   },
   {
-    title: "BrushWire",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["NextJS", "Java", "Spring", "AWS Aurora"],
+    title: "Clinique Internationale de Mohammedia",
+    imgSrc: "projet2.jpg",
     description:
-      "Think Zapier but for paint. Built with a team of four college friends and scaled to > 1 billion requests per day. This was a fun one.",
-    modalContent: (
-      <>
-        <p>
-          Brush wire is essentially Zapier but for paint. Built with a team of
-          four college friends and scaled to {">"} 1 billion requests per day.
-          This was a fun one.
-        </p>
-        <p>
-          Since &quot;Zapier for paint&quot; doesn&apos;t mean anything, be
-          creative {":)"}
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
-        </p>
-        <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
-        </p>
-      </>
-    ),
+      "Renforcement des capacités de la clinique avec des solutions médicales modernes et innovantes adaptées à ses besoins spécifiques.",
+      modalContent: (
+        <>
+          <p>
+            AMTI a contribué à moderniser les infrastructures de la Clinique
+            Internationale de Mohammedia en fournissant des équipements médicaux
+            de haute performance.
+          </p>
+        </>
+      ),
   },
   {
-    title: "Paint Reference 4",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["Python", "FastAPI", "SQLAlchemy"],
+    title: "Clinique de Spécialités de Safi",
+    imgSrc: "projet3.jpg",
     description:
-      "I couldn't think of another paint reference app, so here we are. I think you get the idea, right? Use your imagination 🌈",
-    modalContent: (
-      <>
-        <p>Alright, you got me. I&apos;m all out of paint references.</p>
-        <p>
-          Point is, use this space to explain a bit further WHAT this project
-          is, as well as what YOU contributed to it.
-        </p>
-        <p>You get the idea. Now more lorem {":)"}</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
-        </p>
-        <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
-        </p>
-      </>
-    ),
+      "Fourniture d'équipements spécialisés pour améliorer les soins et le confort des patients de la région de Safi.",
+      modalContent: (
+        <>
+          <p>
+            Ce projet visait à offrir des services spécialisés de santé à Safi.
+            AMTI a fourni des équipements adaptés pour garantir des soins de
+            qualité aux patients.
+          </p>
+        </>
+      ),
   },
 ];

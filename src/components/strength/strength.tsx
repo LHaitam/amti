@@ -11,8 +11,10 @@ export const Strength = () => {
         <div className="space-y-4">
           <Reveal>
             <p className="leading-relaxed text-black">
-              Depuis sa création, <span className="font-bold text-[#2591c2]">AMTI&nbsp;</span> 
-              s&apos;est démarquée par sa capacité à innover et à fournir des solutions
+              <span className="bg-[#2591c2] text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
+                AMTI
+              </span> 
+              s&apos;est démarquée depuis sa création par sa capacité à innover et à fournir des solutions
               fiables pour le secteur médical. Nos forces ne résident pas seulement dans 
               nos produits, mais aussi dans notre vision et notre engagement envers l&apos;excellence.
             </p>

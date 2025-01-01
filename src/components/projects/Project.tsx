@@ -8,21 +8,15 @@ import Reveal from "../util/Reveal";
 interface Props {
   modalContent: JSX.Element;
   description: string;
-  projectLink: string;
   imgSrc: string;
-  tech: string[];
   title: string;
-  code: string;
 }
 
 export const Project = ({
   modalContent,
-  projectLink,
   description,
   imgSrc,
   title,
-  code,
-  tech,
 }: Props) => {
   const [hovered, setHovered] = useState(false);
 
@@ -77,28 +71,16 @@ export const Project = ({
               </h4>
               <div className="w-full h-[1px] bg-zinc-600" />
 
-              <Link href={code} target="_blank" rel="nofollow">
-                <AiFillGithub className="text-xl text-zinc-300 hover:text-[#2591c2] transition-colors" />
-              </Link>
-
-              <Link href={projectLink} target="_blank" rel="nofollow">
-                <AiOutlineExport className="text-xl text-zinc-300 hover:text-[#2591c2] transition-colors" />
-              </Link>
             </div>
           </Reveal>
           <Reveal>
-            <div className="flex flex-wrap gap-4 text-sm text-[#2591c2] my-2">
-              {tech.join(" - ")}
-            </div>
-          </Reveal>
-          <Reveal>
-            <p className="text-zinc-300 leading-relaxed">
+            <p className="text-zinc-500 leading-relaxed">
               {description}{" "}
               <span
                 className="inline-block text-sm text-[#2591c2] cursor-pointer"
                 onClick={() => setIsOpen(true)}
               >
-                Learn more {">"}
+                Lire la suite{">"}
               </span>
             </p>
           </Reveal>
@@ -106,13 +88,10 @@ export const Project = ({
       </motion.div>
       <ProjectModal
         modalContent={modalContent}
-        projectLink={projectLink}
         setIsOpen={setIsOpen}
         isOpen={isOpen}
         imgSrc={imgSrc}
         title={title}
-        code={code}
-        tech={tech}
       />
     </>
   );

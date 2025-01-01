@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
+import { AiFillGithub, AiOutlineArrowRight, AiOutlineExport } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 
 interface Props {
@@ -10,21 +10,15 @@ interface Props {
   setIsOpen: Function;
   title: string;
   imgSrc: string;
-  code: string;
-  projectLink: string;
-  tech: string[];
   modalContent: JSX.Element;
 }
 
 export const ProjectModal = ({
   modalContent,
-  projectLink,
   setIsOpen,
   imgSrc,
   isOpen,
   title,
-  code,
-  tech,
 }: Props) => {
   useEffect(() => {
     const body = document.querySelector("body");
@@ -58,36 +52,14 @@ export const ProjectModal = ({
         />
         <div className="p-8">
           <h4 className="text-3xl font-bold mb-2">{title}</h4>
-          <div className="flex flex-wrap gap-2 text-sm text-[#2591c2]">
-            {tech.join(" - ")}
-          </div>
 
           <div className="space-y-4 my-6 leading-relaxed text-sm text-zinc-300">
             {modalContent}
           </div>
 
-          <div>
-            <p className="font-bold mb-2 text-xl">
-              Project Links<span className="text-[#2591c2]">.</span>
-            </p>
-            <div className="flex items-center gap-4 text-sm">
-              <Link
-                target="_blank"
-                rel="nofollow"
-                className="text-zinc-300 hover:text-[#2591c2] transition-colors flex items-center gap-1"
-                href={code}
-              >
-                <AiFillGithub /> Source Code
-              </Link>
-              <Link
-                target="_blank"
-                rel="nofollow"
-                className="text-zinc-300 hover:text-[#2591c2] transition-colors flex items-center gap-1"
-                href={projectLink}
-              >
-                <AiOutlineExport /> Live Project
-              </Link>
-            </div>
+          <div className="flex items-center gap-4 text-sm text-[#2591c2]">
+            <span>En savoir plus </span>
+            <AiOutlineArrowRight />
           </div>
         </div>
       </motion.div>

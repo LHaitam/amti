@@ -30,12 +30,14 @@ export const Products = () => {
   ];
 
   return (
-    <section id="products" className="py-16 text-black">
+    <section id="products" className=" text-black">
       <SectionHeader title="Nos&nbsp;Produits" dir="l" />
       <div className="container mx-auto px-4">
         <Reveal>
           <p className="text-center text-justify text-zinc-600 mb-12 leading-relaxed">
-            Chez <span className="font-bold text-[#2591c2]">AMTI</span>, nous proposons
+             <span className="bg-[#2591c2] text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
+                AMTI
+              </span>, vous propose
             une gamme variée de produits médicaux, allant des chariots et lits médicaux
             aux tables opératoires et accessoires spécialisés. En tant qu'entreprise
             industrielle, notre expertise nous permet également de concevoir des solutions
