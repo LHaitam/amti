@@ -3,7 +3,7 @@ import { OutlineButton } from "../buttons/OutlineButton";
 
 const Hero = () => {
   return (
-    <section className="relative text-slat-100 overflow-hidden min-h-screen flex items-center">
+    <section className="relative text-slat-100 overflow-hidden min-h-screen flex items-center justify-center">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
@@ -17,47 +17,21 @@ const Hero = () => {
           Your browser does not support the video tag.
         </video>
         {/* Background Overlay */}
-        {/* <div className="absolute inset-0 bg-black/50"></div> */}
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto px-4 md:px-8 text-center">
+      <div className="relative z-10 mx-auto px-4 md:px-8 text-center flex flex-col items-center justify-center">
         <Reveal>
-          <h1 className="pointer-events-auto font-bold text-6xl sm:text-6xl font-black text-zinc-100 md:text-7xl">
-            <span
-              className="text-[#2a3b8d]"
-              style={{
-                // textShadow: "0 0 .5px white, 0 0 .5px white",
-              }}
-            >
-              ALFA MAROC TECH
-            </span>
-            <span
-              className="text-[#1b7cc1]"
-              style={{
-                // textShadow: "0 0 .5px white, 0 0 .5px white",
-              }}
-            >
-              &nbsp;INDUSTRIE
-            </span>
+          <h1 className="pointer-events-auto font-bold text-4xl sm:text-6xl font-black text-zinc-100 md:text-7xl">
+            <span className="text-[#2a3b8d]">ALFA MAROC TECH</span>
+            <span className="text-[#1b7cc1]">&nbsp;INDUSTRIE</span>
           </h1>
         </Reveal>
         <Reveal>
-          <h2
-            className="pointer-events-auto text-3xl sm:text-2xl text-white md:my-6 md:text-4xl"
-            style={{
-              // textShadow: "0 0 .5px white, 0 0 .5px white",
-            }}
-          >
+          <h2 className="pointer-events-auto text-xl sm:text-2xl text-white md:my-6 md:text-4xl mt-4">
             Souverainetés industrielle{" "}
-            <span
-              className="font-semibold text-[#2591c2]"
-              style={{
-                // textShadow: "0 0 .5px white, 0 0 .5px white",
-              }}
-            >
-              marocaine
-            </span>
+            <span className="font-semibold text-[#2591c2]">marocaine</span>
           </h2>
         </Reveal>
         <Reveal>
