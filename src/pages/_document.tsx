@@ -13,7 +13,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body id="root" className="bg-zinc-900 text-zinc-50">
+      <body id="root" className="bg-white text-zinc-50">
         <Main />
         <NextScript />
       </body>
