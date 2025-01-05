@@ -26,8 +26,8 @@ export const HomPage = () => {
             <Strength />
             <Products />
             <Projects />
-            {/*<Experience />
-            <Contact /> */}
+            <Experience />
+            <Contact />
           </div>
         </div>
       </main>

@@ -11,9 +11,7 @@ export const About = () => {
         <div className="space-y-4">
           <Reveal>
             <p className="leading-relaxed text-black">
-              <span className="bg-[#2591c2] text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
-                AMTI
-              </span>
+            <span className="font-bold text-[#2591c2]">AMTI</span>
               , pionnier marocain dans la fabrication d&apos;équipements médicaux de
               pointe, transforme le paysage médical depuis 2020. En réponse à la
               pandémie de COVID-19, nous avons établi des standards d&apos;excellence

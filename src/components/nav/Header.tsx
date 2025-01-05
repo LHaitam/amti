@@ -669,7 +669,7 @@ const MobileMenuLink = ({
 const LINKS = [
   {
     text: "À Propos",
-    href: "#about",
+    href: "/about",
   },
   {
     text: "Nos Forces",
