@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer: React.FC = () => {
@@ -15,22 +16,22 @@ const Footer: React.FC = () => {
             />
             <p className="text-sm font-bold">
               Tel :{" "}
-              <a href="tel:+212522539011" className="text-zinc-200 font-bold hover:text-[#2591c2] transition">
+              <Link href="tel:+212522539011" className="text-zinc-200 font-bold hover:text-[#2591c2] transition">
                 +212 5 22 53 90 11
-              </a>{" "}
+              </Link>{" "}
               /{" "}
-              <a href="tel:+212661311229" className="text-zinc-200 font-bold hover:text-[#2591c2] transition">
+              <Link href="tel:+212661311229" className="text-zinc-200 font-bold hover:text-[#2591c2] transition">
                 +212 6 61 31 12 29
-              </a>
+              </Link>
             </p>
             <p className="text-sm font-bold ">
               E-mail :{" "}
-              <a
+              <Link
                 href="mailto:contact@amti.ma"
                 className="text-zinc-200 font-bold hover:text-[#2591c2] transition"
               >
                 contact@amti.ma
-              </a>
+              </Link>
             </p>
             <p className="text-sm font-bold">
               Adresse : Aéropôle de l'Aéroport Med V, <br />27000 Nouasseur,
@@ -44,36 +45,36 @@ const Footer: React.FC = () => {
               <h4 className="font-bold text-lg mb-3 text-zinc-200">EN SAVOIR PLUS</h4>
               <ul className="space-y-2">
                 <li>
-                  <a
+                  <Link
                     href="/about"
                     className="hover:text-[#2591c2] transition font-bold text-zinc-200"
                   >
                     Qui sommes-nous
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/strengths"
                     className="hover:text-[#2591c2] transition font-bold text-zinc-200"
                   >
                     Nos forces
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/solutions"
                     className="hover:text-[#2591c2] transition font-bold text-zinc-200"
                   >
-                    Nos solutions
-                  </a>
+                    Nos produits
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/projects"
                     className="hover:text-[#2591c2] transition font-bold text-zinc-200"
                   >
                     Nos grands projets
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -81,12 +82,12 @@ const Footer: React.FC = () => {
               <h4 className="font-bold text-lg mb-3 text-zinc-200">NOUS REJOINDRE</h4>
               <ul className="space-y-2">
                 <li>
-                  <a
+                  <Link
                     href="/contact"
                     className="hover:text-[#2591c2] transition font-bold text-zinc-200"
                   >
                     Formulaire de contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -96,12 +97,12 @@ const Footer: React.FC = () => {
               </h4>
               <ul className="space-y-2">
                 <li>
-                  <a
+                  <Link
                     href="/terms"
                     className="hover:text-[#2591c2] transition font-bold text-zinc-200"
                   >
                     Conditions générales
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
