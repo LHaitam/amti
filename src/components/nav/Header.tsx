@@ -468,7 +468,7 @@ const FlyoutNav = () => {
   return (
     <nav
       className={`fixed top-0 z-50 w-full px-6 text-white transition-all duration-300 ease-out lg:px-12 ${
-        scrolled ? "bg-neutral-950 py-3 shadow-xl" : "bg-neutral-950/0 py-6 shadow-none"
+        scrolled ? "bg-zinc-900 py-3 shadow-xl" : "bg-neutral-950/0 py-6 shadow-none"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
@@ -673,16 +673,16 @@ const LINKS = [
   },
   {
     text: "Nos Forces",
-    href: "#strengths",
+    href: "/strengths",
   },
   {
     text: "Nos Produits",
-    href: "#products",
+    href: ":products",
   },
   
   {
     text: "Nos Projets",
-    href: "#projects",
+    href: ":projects",
   },
 ];
 

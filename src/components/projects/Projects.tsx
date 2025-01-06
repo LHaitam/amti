@@ -8,12 +8,11 @@ import Link from "next/link";
 export const Projects = () => {
   return (
     <section className="section-wrapper text-black" id="projects">
-      <SectionHeader title="Nos&nbsp;Grand&nbsp;Projets" dir="l" />
+      <SectionHeader title="Nos&nbsp;Grand&nbsp;Projets" dir="r" />
       <Reveal>
-        <p className="text-center text-justify text-zinc-600 mb-12 leading-relaxed">
-          <span className="bg-[#2591c2] text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
-            AMTI
-          </span> est fier de contribuer à des projets médicaux d'envergure à travers le Maroc.
+        <p className="text-center text-justify text-black mb-12 leading-relaxed">
+          <span className="font-bold text-[#2591c2]">AMTI </span>
+          est fier de contribuer à des projets médicaux d'envergure à travers le Maroc.
           Grâce à notre expertise et nos solutions innovantes, nous avons collaboré avec des institutions prestigieuses pour améliorer les infrastructures
           et les services de santé dans différentes régions. Découvrez nos projets les plus marquants.
         </p>
@@ -27,7 +26,7 @@ export const Projects = () => {
         <div className="flex justify-center items-center">
           <Link
             href="/projects"
-            className="text-sm text-[#2591c2] flex items-center gap-2 font-semibold hover:text-[#1066af] transition"
+            className="text-sm text-[#2591c2] flex items-center gap-2 hover:text-[#1066af] transition"
           >
             En savoir plus <AiOutlineArrowRight />
           </Link>

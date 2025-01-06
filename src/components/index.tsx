@@ -1,14 +1,12 @@
 import React from "react";
-import { SideBar } from "./nav/SideBar";
 import FlyoutNav from "./nav/Header"; // Si exporté par défaut
 import Hero from "./hero/Hero";
 import { About } from "./about/About";
 import { Projects } from "./projects/Projects";
-import { Experience } from "./experience/Experience";
 import { Strength } from "./strength/strength";
 import { Contact } from "./contact/Contact";
 import { Products } from "./products/products";
-import BasicFAQ from "./faq/BasicFAQ";
+import Footer from "./footer/Footer";
 
 export const HomPage = () => {
   return (
@@ -18,18 +16,33 @@ export const HomPage = () => {
         <div className="space-y-32 pb-24">
           {/* Hero section with full width */}
           <div className="w-full min-h-screen z-10 bg-black bg-opacity-10">
-            <Hero />
-          </div>
+            <Hero
+              title={
+                <>
+                  <span className="text-[#2a3b8d]">ALFA MAROC TECH</span>
+                  <span className="text-[#1b7cc1]">&nbsp;INDUSTRIE</span>
+                </>
+              }
+              subtitle={
+                <>
+                  Souverainetés industrielle{" "}
+                  <span className="font-semibold text-[#2591c2]">marocaine</span>
+                </>
+              }
+              buttonText="Découvrez notre catalogue"
+              buttonLink="/catalogue.pdf"
+              bgVideo="/bg.mp4"
+            />          </div>
           {/* Rest of the content */}
           <div className="mx-auto max-w-5xl px-4 md:px-8 space-y-32">
             <About />
             <Strength />
             <Products />
             <Projects />
-            <Experience />
-            <Contact />
+            {/* <Contact /> */}
           </div>
         </div>
+        <Footer />
       </main>
     </div>
   );

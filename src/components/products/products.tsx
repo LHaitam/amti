@@ -2,51 +2,44 @@ import Reveal from "../util/Reveal";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { SectionHeader } from "../util/SectionHeader";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const Products = () => {
-  const gridItems = [
+  const projectCategories = [
     {
-      title: "Chariots Médicaux",
-      description: "Ergonomiques et adaptés aux besoins des professionnels.",
-      image: "/prd.jpg",
+      title: "Cabinets Médicaux",
+      description: "Des solutions adaptées aux besoins des professionnels.",
+      image: "/cabinet.jpg",
     },
     {
-      title: "Lits Médicaux",
-      description:
-        "Confortables, durables et conçus pour répondre aux normes médicales.",
-      image: "/prd1.jpg",
+      title: "Hôpitaux",
+      description: "Une expertise complète pour les grandes infrastructures.",
+      image: "/hopital.jpg",
     },
     {
-      title: "Tables Opératoires",
-      description:
-        "Robustes et conçues pour les environnements exigeants.",
-      image: "/prd2.jpg",
+      title: "Cliniques Privées",
+      description: "Des équipements modernes et sur mesure.",
+      image: "/clinique.jpg",
     },
     {
-      title: "Accessoires Médicaux",
-      description: "Une gamme complète pour vos besoins spécifiques.",
-      image: "/prd3.jpg",
+      title: "Centres de Santé",
+      description: "Un accompagnement optimal pour les projets communautaires.",
+      image: "/centre.jpg",
     },
   ];
 
   return (
-    <section id="products" className=" text-black">
-      <SectionHeader title="Nos&nbsp;Produits" dir="l" />
+    <section id="projects" className="text-black">
+      <SectionHeader title="Accompagnement&nbsp;Sur&nbsp;Mesure" dir="l" />
       <div className="container mx-auto px-4">
         <Reveal>
-          <p className="text-center text-justify text-zinc-600 mb-12 leading-relaxed">
-             <span className="bg-[#2591c2] text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
-                AMTI
-              </span>, vous propose
-            une gamme variée de produits médicaux, allant des chariots et lits médicaux
-            aux tables opératoires et accessoires spécialisés. En tant qu'entreprise
-            industrielle, notre expertise nous permet également de concevoir des solutions
-            sur mesure adaptées à vos besoins spécifiques, même hors catalogue.
+          <p className="text-center text-justify text-black mb-12 leading-relaxed">
+            <span className="font-bold text-[#2591c2]">AMTI</span>, fort de son expertise industrielle, accompagne vos projets d&apos;installation sur mesure. Que vous soyez un cabinet médical, un hôpital, une clinique privée ou un centre de santé, nous vous proposons des solutions adaptées à vos besoins spécifiques, avec un accompagnement complet de la conception à l&apos;installation.
           </p>
         </Reveal>
         <Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            {gridItems.map((item, index) => (
+            {projectCategories.map((category, index) => (
               <motion.div
                 key={index}
                 className="relative group overflow-hidden rounded-lg shadow-lg"
@@ -60,15 +53,15 @@ export const Products = () => {
               >
                 {/* Image */}
                 <img
-                  src={item.image}
-                  alt={item.title}
+                  src={category.image}
+                  alt={category.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 {/* Details on hover */}
                 <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{category.title}</h3>
                   <p className="text-sm text-zinc-300 text-center px-4">
-                    {item.description}
+                    {category.description}
                   </p>
                 </div>
               </motion.div>
@@ -77,12 +70,12 @@ export const Products = () => {
         </Reveal>
         <Reveal>
           <div className="flex justify-center items-center">
-            <a
-              href="/products"
-              className="text-sm text-[#2591c2] flex items-center gap-2 font-semibold hover:text-[#1066af] transition"
+            <Link
+              href="/projects"
+              className="text-sm text-[#2591c2] flex items-center gap-2  hover:text-[#1066af] transition"
             >
               En savoir plus <AiOutlineArrowRight />
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

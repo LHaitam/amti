@@ -2,6 +2,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { SectionHeader } from "../util/SectionHeader";
 import Reveal from "../util/Reveal";
 import { Company } from "./Company";
+import Link from "next/link";
 
 export const About = () => {
   return (
@@ -36,8 +37,8 @@ export const About = () => {
           <Reveal>
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-4 text-sm text-[#2591c2]">
-                <span>En savoir plus </span>
-                <AiOutlineArrowRight />
+              <Link href="/about">En savoir plus </Link>
+              <AiOutlineArrowRight />
               </div>
             </div>
           </Reveal>

@@ -38,7 +38,7 @@ const AnimatedNumber: React.FC<{ value: number; suffix?: string }> = ({
 
   useEffect(() => {
     let start = 0;
-    const duration = 2000; // Animation duration in milliseconds
+    const duration = 4000; // Animation duration in milliseconds
     const increment = value / (duration / 50); // Increment step (every 50ms)
 
     const interval = setInterval(() => {

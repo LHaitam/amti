@@ -1,6 +1,6 @@
 import React from "react";
 import { SectionHeader } from "../util/SectionHeader";
-import Reveal from "../util/Reveal";
+import { motion } from "framer-motion";
 
 const historiqueData = [
     {
@@ -29,14 +29,32 @@ const historiqueData = [
 ];
 
 export const HistoriqueSection: React.FC = () => {
+    const timelineItemVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: (index: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: index * 0.2, // Décalage pour chaque élément
+                duration: 0.6,
+                ease: "easeOut",
+            },
+        }),
+    };
+
     return (
         <section id="history" className="section-wrapper text-black">
             <SectionHeader title="Notre&nbsp;Historique" dir="l" />
             <ul className="relative border-l-4 border-[#2591c2] max-w-2xl mx-auto">
                 {historiqueData.map((item, index) => (
-                    <li
+                    <motion.li
                         key={index}
                         className="mb-10 ml-4 relative pl-8 pb-8 last:pb-0"
+                        custom={index}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        variants={timelineItemVariants}
                     >
                         {/* Circle */}
                         <div className="absolute w-3 h-3 bg-[#2591c2] rounded-full top-0 left-[-9px]"></div>
@@ -48,7 +66,7 @@ export const HistoriqueSection: React.FC = () => {
                         <h3 className="text-lg font-bold text-black">{item.title}</h3>
                         {/* Description */}
                         <p className="text-[#6c6d6d]">{item.description}</p>
-                    </li>
+                    </motion.li>
                 ))}
             </ul>
         </section>
