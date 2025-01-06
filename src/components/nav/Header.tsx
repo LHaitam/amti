@@ -443,6 +443,7 @@ import React, { useState, Dispatch, SetStateAction } from "react";
 import { FiMenu, FiArrowRight, FiX, FiChevronDown } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import useMeasure from "react-use-measure";
+import Link from "next/link";
 
 const Example = () => {
   return (
@@ -467,9 +468,8 @@ const FlyoutNav = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full px-6 text-white transition-all duration-300 ease-out lg:px-12 ${
-        scrolled ? "bg-zinc-900 py-3 shadow-xl" : "bg-neutral-950/0 py-6 shadow-none"
-      }`}
+      className={`fixed top-0 z-50 w-full px-6 text-white transition-all duration-300 ease-out lg:px-12 ${scrolled ? "bg-zinc-900 py-3 shadow-xl" : "bg-neutral-950/0 py-6 shadow-none"
+        }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <Logo />
@@ -486,12 +486,14 @@ const FlyoutNav = () => {
 const Logo = ({ color = "white", size = 100 }: { color?: string; size?: number }) => {
   return (
     <div className="flex items-center gap-2">
-      <img
-        src="/logo.png"
-        alt="Logo AMTI"
-        style={{ width: `${size}px`, fill: color }}
-        className="block"
-      />
+      <Link href="/">
+        <img
+          src="/logo.png"
+          alt="Logo AMTI"
+          style={{ width: `${size}px`, fill: color }}
+          className="block"
+        />
+      </Link>
     </div>
   );
 };
@@ -679,7 +681,7 @@ const LINKS = [
     text: "Nos Produits",
     href: ":products",
   },
-  
+
   {
     text: "Nos Projets",
     href: ":projects",
